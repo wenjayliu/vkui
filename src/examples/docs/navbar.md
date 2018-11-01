@@ -6,7 +6,7 @@ ___
 ``` html
 <template>
   <div>
-    <nav-tab title="旗峰山" :items="tabItems"/>
+    <nav-tab title="旗峰山" :items="tabItems" :selected="selected" @click-item="clickItem"/>
   </div>
 </template>
 
@@ -18,7 +18,13 @@ export default {
       tabItems: [
         {label: '山口'},
         {label: '山下'}
-      ]
+      ],
+      selected: 0
+    }
+  },
+  methods: {
+    clickItem(index, item) {
+      this.selected = index
     }
   },
   components: {
@@ -39,4 +45,4 @@ export default {
 ### Events
 | 事件名称  | 说明             | 回调参数      |
 |---------- |----------------  |----------     |
-|click-item |tab点击           |新状态的值     |
+|click-item |tab点击           |共2个参数，依次为：index, 被点击的item     |

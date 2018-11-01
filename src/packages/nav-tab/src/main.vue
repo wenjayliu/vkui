@@ -48,16 +48,17 @@ export default {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: 36px;
+  line-height: 36px;
   background: #d3d9e2;
 }
 .title {
   box-sizing: border-box;
-  color: #fff;
-  background: #384a66;
+  color: #131d2d;
+  background: #d3d9e2;
   font-size: 16px;
   width: 120px;
+  font-weight: bold;
   padding: 0 20px;
 }
 .tab-item-wrapper {

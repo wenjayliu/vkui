@@ -1,8 +1,6 @@
 <template>
   <div>
-    <nav-tab
-      title="山口" :items="tabItems"
-    />
+    <nav-tab title="质量整改" :items="tabItems" :selected="selected" @click-item="clickItem"/>
   </div>
 </template>
 
@@ -13,13 +11,15 @@ export default {
   data () {
     return {
       tabItems: [
-        {
-          label: '山口'
-        },
-        {
-          label: '山下'
-        }
-      ]
+        {label: '山口'},
+        {label: '山下'}
+      ],
+      selected: 0
+    }
+  },
+  methods: {
+    clickItem(index) {
+      this.selected = index
     }
   },
   components: {
